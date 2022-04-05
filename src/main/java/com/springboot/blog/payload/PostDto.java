@@ -2,6 +2,8 @@ package com.springboot.blog.payload;
 
 import lombok.Data;
 
+import java.util.Set;
+
 /**
  * Created by user on 1/4/2022.
  */
@@ -13,6 +15,9 @@ public class PostDto {
     private String title ;
     private String description ;
     private String content ;
+    private Set<CommentDto> commentDtoSet ;
+
+
 
     public long getId() {
         return id;
@@ -44,5 +49,13 @@ public class PostDto {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Set<CommentDto> getCommentDtoSet() {
+        return commentDtoSet;
+    }
+
+    public void setCommentDtoSet(Set<CommentDto> commentDtoSet) {
+        this.commentDtoSet = commentDtoSet;
     }
 }
